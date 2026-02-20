@@ -67,7 +67,7 @@ body {
 
 .nav-bar a:active {
   color: var(--text-color-accent);
-  background-color: var(--secondary-color);
+  background-color: var(--shadow-color);
   scale: 0.9;
 }
 .nav-bar svg {
@@ -212,13 +212,18 @@ body {
 @media (min-width: 769px) {
   .nav-bar a:hover {
     color: var(--text-color-accent);
-    background-color: var(--secondary-color);
+    background-color: var(--shadow-color);
     scale: 1.2;
   }
   .about:hover,
   .modules-article:hover {
     scale: 1.1;
     box-shadow: var(--shadow-hover);
+  }
+  .nav-bar a:active {
+    color: var(--text-color-accent);
+    background-color: var(--shadow-color);
+    scale: 0.9;
   }
   .stats {
     flex-direction: row;
