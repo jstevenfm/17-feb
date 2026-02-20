@@ -136,6 +136,7 @@ body {
   flex-direction: column;
   margin-top: 24px;
   gap: 20px;
+  transition: all 0.3s ease;
 }
 .stats article {
   border: 1px solid var(--shadow-color);
@@ -218,7 +219,7 @@ body {
   .about:hover,
   .modules-article:hover {
     scale: 1.1;
-    box-shadow: var(--shadow-hover);
+    /* box-shadow: var(--shadow-hover); */
   }
   .nav-bar a:active {
     color: var(--text-color-accent);
