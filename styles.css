@@ -163,8 +163,9 @@ body {
 
 /*===== Modules ======*/
 .modules {
-  padding: clamp(16px, 5vw, 32px);
+  padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 32px);
   margin-top: -150px;
+  transition: all 0.3s ease;
 }
 
 .modules div {
@@ -180,9 +181,14 @@ body {
 
 .modules-article {
   padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 32px);
-  border: 1px solid rgb(110, 110, 110);
+  border: 1px solid var(--shadow-color);
   border-radius: 24px;
   width: 450px;
+  background: linear-gradient(
+    135deg,
+    rgba(50, 186, 240, 0.08) 0%,
+    rgba(147, 23, 235, 0.08) 100%
+  );
 }
 
 .modules-article h3 {
@@ -199,6 +205,40 @@ body {
   margin-top: 8px;
 }
 
+/*===== Contact ======*/
+.contact {
+  padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 32px);
+  transition: all 0.3s ease;
+}
+.contact div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--shadow-color);
+  border-radius: 24px;
+  padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 32px);
+}
+.contact h2 {
+  font-size: clamp(20px, 5vw, 48px);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.contact p {
+  font-size: clamp(12px, 4vw, 20px);
+  margin-bottom: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact form label {
+  font-size: clamp(14px, 4vw, 20px);
+  font-weight: 600;
+}
+
+/*===== Footer ======*/
 /* .finish {
   display: absolute;
   bottom: 0;
