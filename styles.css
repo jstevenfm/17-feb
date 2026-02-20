@@ -10,10 +10,11 @@
   --nav-color: rgba(50, 186, 240, 0.3);
   --text-color-accent: rgba(115, 251, 211, 1);
   --shadow-color: rgba(147, 23, 235, 0.2);
+  --shadow-color-accent: rgba(115, 251, 211, 0.2);
 
   /* Shadows */
   --main-shadow: 0 8px 16px -2px var(--shadow-color);
-  --shadow-hover: 0 10px 15px -3px var(--text-color-accent);
+  --shadow-hover: 0 8px 16px -5px var(--text-color-accent);
 }
 
 /* ===== Reset Styles ======*/
@@ -220,6 +221,7 @@ body {
   .about:hover,
   .modules-article:hover {
     scale: 1.1;
+    border: 1px solid var(--text-color-accent);
     /* box-shadow: var(--shadow-hover); */
   }
   .nav-bar a:active {
@@ -231,8 +233,9 @@ body {
     flex-direction: row;
   }
   .stats article:hover {
-    scale: 1.05;
-    background-color: rgba(115, 251, 211, 0.3);
+    /* scale: 1.05; */
+    transform: translateY(-8px);
+    background-color: var(--shadow-color-accent);
     border: 1px solid var(--text-color-accent);
   }
 }
