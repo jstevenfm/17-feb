@@ -24,6 +24,7 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  list-style: none;
 }
 
 /*===== Global ======*/
@@ -122,12 +123,12 @@ body {
 }
 .about h2 {
   margin-bottom: 12px;
-  font-size: 32px;
+  font-size: clamp(24px, 5vw, 48px);
   color: white;
 }
 
 .about p {
-  font-size: 16px;
+  font-size: clamp(14px, 4vw, 20px);
   color: var(--text-color);
 }
 
@@ -155,36 +156,38 @@ body {
   color: var(--text-color);
 }
 .stats p {
-  font-size: 12px;
+  font-size: clamp(12px, 4vw, 20px);
   color: var(--text-color);
   margin-top: 4px;
 }
 
-/*
+/*===== Modules ======*/
 .modules {
-  padding: 40px;
-  margin-top: -120px;
+  padding: 32px;
+  margin-top: -150px;
   color: rgb(110, 110, 110);
 }
 
 .modules div {
   display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
 .modules h2 {
-  margin-bottom: 32px;
+  font-size: 32px;
+  margin-bottom: 40px;
 }
 
 .modules-article {
   padding: 32px;
-  margin: 16px;
   border: 1px solid rgb(110, 110, 110);
   border-radius: 24px;
-  width: 450px; 
-}*/
+  width: 450px;
+}
 
-/* .modules-article h3 {
-  color: rgb(49, 49, 49);
+.modules-article h3 {
+  font-size: 24px;
   margin-bottom: 16px;
 }
 
@@ -194,7 +197,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 32px;
   border-radius: 24px;
-} */
+}
 
 /*===== Animations ======*/
 @keyframes pulsate-bck-normal {
