@@ -6,7 +6,7 @@
   --primary-color: rgba(50, 186, 240, 1);
   --secondary-color: rgba(147, 23, 235, 1);
   --background-color: rgb(225, 233, 241);
-  --text-color: rgba(43, 43, 43, 1);
+  --text-color: rgb(43, 43, 43, 1);
   --nav-color: rgba(50, 186, 240, 0.3);
   --text-color-accent: rgba(115, 251, 211, 1);
   --shadow-color: rgba(147, 23, 235, 0.2);
@@ -114,7 +114,7 @@ body {
   position: relative;
   top: -217px;
   width: clamp(312px, 95dvw, 800px);
-  padding: 32px;
+  padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 32px);
   border-radius: 24px;
   margin: 0 auto;
   box-shadow: var(--main-shadow);
@@ -163,9 +163,8 @@ body {
 
 /*===== Modules ======*/
 .modules {
-  padding: 32px;
+  padding: clamp(16px, 5vw, 32px);
   margin-top: -150px;
-  color: rgb(110, 110, 110);
 }
 
 .modules div {
@@ -175,29 +174,38 @@ body {
 }
 
 .modules h2 {
-  font-size: 32px;
+  font-size: clamp(24px, 5vw, 48px);
   margin-bottom: 40px;
 }
 
 .modules-article {
-  padding: 32px;
+  padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 32px);
   border: 1px solid rgb(110, 110, 110);
   border-radius: 24px;
   width: 450px;
 }
 
 .modules-article h3 {
-  font-size: 24px;
+  font-size: clamp(20px, 5vw, 48px);
   margin-bottom: 16px;
 }
+.modules-article p {
+  font-size: clamp(12px, 4vw, 20px);
+  margin-bottom: 20px;
+}
+.modules-article li {
+  font-size: clamp(12px, 4vw, 20px);
+  margin-left: 16px;
+  margin-top: 8px;
+}
 
-.finish {
+/* .finish {
   display: absolute;
   bottom: 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 32px;
   border-radius: 24px;
-}
+} */
 
 /*===== Animations ======*/
 @keyframes pulsate-bck-normal {
