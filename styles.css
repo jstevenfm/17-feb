@@ -216,6 +216,11 @@ body {
   border: 1px solid var(--shadow-color);
   border-radius: 24px;
   padding: clamp(20px, 5vw, 32px) clamp(16px, 5vw, 32px);
+  background: linear-gradient(
+    135deg,
+    rgba(50, 186, 240, 0.08) 0%,
+    rgba(147, 23, 235, 0.08) 100%
+  );
 }
 .contact h2 {
   font-size: clamp(20px, 5vw, 48px);
