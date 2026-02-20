@@ -2,12 +2,18 @@
 
 /*===== Variables ======*/
 :root {
+  /* Colors */
   --primary-color: rgba(50, 186, 240, 1);
   --secondary-color: rgba(147, 23, 235, 1);
   --background-color: rgb(225, 233, 241);
   --text-color: rgba(43, 43, 43, 1);
-  --accent-color: rgba(50, 186, 240, 0.3);
-  --accent-color-hover: rgba(115, 251, 211, 1);
+  --nav-color: rgba(50, 186, 240, 0.3);
+  --text-color-accent: rgba(115, 251, 211, 1);
+  --shadow-color: rgba(147, 23, 235, 0.2);
+
+  /* Shadows */
+  --main-shadow: 0 8px 16px -2px var(--shadow-color);
+  --shadow-hover: 0 10px 15px -3px var(--text-color-accent);
 }
 
 /* ===== Reset Styles ======*/
@@ -23,7 +29,6 @@
 html {
   scroll-behavior: smooth;
   color: var(--text-color);
-  font-size: clamp(14px, 4vw, 24px);
 }
 body {
   background-color: var(--background-color);
@@ -45,10 +50,10 @@ body {
   box-shadow:
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  background-color: rgba(0, 0, 0, 0.05);
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
   border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 999;
+  font-size: clamp(12px, 4vw, 18px);
 }
 .nav-bar a {
   padding: 8px;
@@ -61,7 +66,7 @@ body {
 }
 
 .nav-bar a:active {
-  color: var(--accent-color-hover);
+  color: var(--text-color-accent);
   background-color: var(--secondary-color);
   scale: 0.9;
 }
@@ -87,40 +92,51 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: clamp(14px, 4vw, 24px);
 }
 
 .header h1 {
   font-size: clamp(75px, 5vw, 120px);
   margin-bottom: 16px;
   animation: pulsate-bck-normal 1s ease 0s infinite normal none;
+  color: var(--text-color-accent);
+}
+.header p {
+  text-align: center;
 }
 
-/* .about {
+/*===== About ======*/
+.about {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
-  top: -175px;
-  color: rgb(43, 43, 43);
-  width: 70dvw;
+  top: -217px;
+  width: clamp(312px, 80dvw, 500px);
   padding: 32px;
   border-radius: 24px;
   margin: 0 auto;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--main-shadow);
   backdrop-filter: blur(52px);
-}*/
-/*
+  transition: all 0.3s ease;
+}
 .about h2 {
-  color: white;
   margin-bottom: 12px;
   font-size: 32px;
+  color: white;
 }
 
 .about p {
   font-size: 16px;
 }
 
+.about:hover,
+.modules-article:hover {
+  scale: 1.1;
+  box-shadow: var(--shadow-hover);
+  color: black;
+}
+
+/*
 .modules {
   padding: 40px;
   margin-top: -120px;
@@ -142,12 +158,6 @@ body {
   border-radius: 24px;
   width: 450px; 
 }*/
-/* .about:hover,
-.modules-article:hover {
-    scale: 1.1;
-    box-shadow: 0 10px 15px -3px #73fbd3, 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    color: black;
-} */
 
 /* .modules-article h3 {
   color: rgb(49, 49, 49);
@@ -180,7 +190,7 @@ body {
 /*===== Media Queries ======*/
 @media (min-width: 769px) {
   .nav-bar a:hover {
-    color: var(--accent-color-hover);
+    color: var(--text-color-accent);
     background-color: var(--secondary-color);
     scale: 1.2;
   }
