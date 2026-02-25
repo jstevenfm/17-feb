@@ -204,12 +204,13 @@ body {
 }
 
 .modules-article p {
-  font-size: clamp(12px, 4vw, 20px);
+  font-size: clamp(12px, 4vw, 16px);
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .modules-article li {
-  font-size: clamp(12px, 4vw, 20px);
+  font-size: clamp(12px, 4vw, 15px);
   margin-left: 16px;
   margin-top: 8px;
 }
@@ -253,7 +254,7 @@ body {
 }
 
 .contact form label {
-  font-size: 14px;
+  font-size: clamp(12px, 4vw, 16px);
   font-weight: 600;
   margin-top: 16px;
 }
@@ -301,7 +302,8 @@ body {
 .contact .plus {
   font-size: 12px;
   color: var(--text-color);
-  margin-top: 16px;
+  margin-top: 24px;
+  margin-bottom: 0;
   text-align: center;
 }
 
