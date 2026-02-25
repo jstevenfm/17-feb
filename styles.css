@@ -176,9 +176,9 @@ body {
 }
 
 .modules div {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .modules h2 {
@@ -194,6 +194,8 @@ body {
   background: linear-gradient(135deg,
       rgba(50, 186, 240, 0.08) 0%,
       rgba(147, 23, 235, 0.08) 100%);
+  width: clamp(100%, 45%, 800px);
+
 }
 
 .modules-article h3 {
